@@ -5,7 +5,7 @@ metadata:
 spec:
   source:
     http:
-      url: "https://razavi-kubevirt-demo.s3.us-gov-west-1.amazonaws.com/ProductionServer.qcow2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARLAIKPDSW4FDOW4X%2F20251014%2Fus-gov-west-1%2Fs3%2Faws4_request&X-Amz-Date=20251014T161037Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=58bb95748989f6641e70c01bb24a7029cc1f68b46aaff966e8641d15cd2434e4"
+      url: "https://<Your Bucket Name>.us-gov-west-1.amazonaws.com/<Your Image>.qcow2?..."
   pvc:
     accessModes:
       - ReadWriteOnce
