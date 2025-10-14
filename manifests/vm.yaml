@@ -1,0 +1,40 @@
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  name: win2022
+spec:
+  running: true
+  template:
+    spec:
+      nodeSelector:
+        node-type: c5a-compute
+      tolerations:
+      - key: "kubevirt.io/c5a-test"
+        operator: "Equal"
+        value: "true"
+        effect: "NoSchedule"
+      networks:
+        - name: default
+          pod: {}
+      domain:
+        cpu:
+          cores: 4
+        resources:
+          requests:
+            memory: 16Gi
+        firmware:
+          bootloader:
+            efi:
+              secureBoot: false
+        devices:
+          disks:
+            - name: disk0
+              disk:
+                bus: sata
+          interfaces:
+            - name: default
+              masquerade: {}
+      volumes:
+        - name: disk0
+          dataVolume:
+            name: win2022-datavolume
