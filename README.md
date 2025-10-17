@@ -189,3 +189,14 @@ kubectl apply -f lb.yaml
 ```bash
 curl http://<external-ip>
 ```
+
+## Clean-up
+Delete the Load Balancer service and VM.  
+```bash
+kubectl delete svc <service-name>
+```
+```bash
+kubectl delete vm <vm-name>
+```
+
+
