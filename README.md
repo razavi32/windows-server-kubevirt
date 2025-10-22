@@ -10,7 +10,7 @@ This project documents the migration of a Windows Server 2022 VM from Hyper-V on
 - Sufficient cluster resources to run a Windows Server VM (CPU, RAM, storage).
 - Admin access to your current Hyper‑V VM.
 - virtctl, kubectl, and qemu-img installed where you plan to work (i.e. laptop, admin machine)
-- You'll need a Storage Class that uses Immediate provisioning to create a dataVolume in step 2 below
+- You'll need a Storage Class that uses Immediate provisioning to create a dataVolume in step 3 below
 - (Optional for step 5 below) Install TigerVNC or a VNC viewer to open the Windows VM console remotely
 
 ## 1. Install VirtIO Drivers in Hyper-V Before Migration
